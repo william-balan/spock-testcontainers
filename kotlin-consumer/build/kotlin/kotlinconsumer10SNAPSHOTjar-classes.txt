@@ -1,0 +1,1 @@
+/home/william/dev/other/spock-testcontainers/kotlin-consumer/build/classes/kotlin/main/AppConsumer.class:/home/william/dev/other/spock-testcontainers/kotlin-consumer/build/classes/kotlin/main/AppConsumerKt.class

@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+}
+
+group 'com.williammachado'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile (
+            'org.codehaus.groovy:groovy-all:2.5.14',
+            'org.projectlombok:lombok:1.18.18'
+    )
+    testCompile(
+            'org.testcontainers:spock:1.15.2',
+            'org.testcontainers:rabbitmq:1.15.2',
+            'org.awaitility:awaitility-kotlin:4.0.3'
+    )
+}
