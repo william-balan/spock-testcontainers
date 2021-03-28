@@ -11,6 +11,9 @@ FROM openjdk:11-jre-slim
 
 WORKDIR /app
 
-COPY --from=build /app/build/libs/*.jar /app/kotlin-consumer.jar
+COPY --from=build /app/build/libs/*.jar /app/consumer.jar
+COPY wait-for-it.sh /app/wait-for-it.sh
 
-ENTRYPOINT ["java", "-jar", "kotlin-consumer.jar"]
+RUN chmod +x ./wait-for-it.sh
+
+CMD ["java", "-jar", "consumer.jar"]

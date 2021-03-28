@@ -4,8 +4,9 @@ services:
   rabbitmq:
     image: library/rabbitmq:3-management-alpine
 
-  kotlin-consumer:
+  consumer:
     build: ./kotlin-consumer
+    command: ["./wait-for-it.sh", "-t", "30", "rabbitmq:5672", "--", "java", "-jar", "consumer.jar"]
     environment:
       - SPRING_RABBITMQ_HOST=rabbitmq
     depends_on:
